@@ -5,12 +5,12 @@
  * Unidad        : <CalculoPromedioController>                                                                      
  * DescripciÓn   : <Controlador para registrar y mostrar el promedio de calificaciones>                                                      
  * Autor         : <Pedro Castro>
- * Fecha         : <17-08-2017>                                                                             
+ * Fecha         : <11-06-2024>                                                                             
  *                                                                                                           
  * Fecha         Autores         	Modificación                                                                 
  * ===========   ============   	=====================
  * 11-06-2024   <Pedro Castro>        1 - Version Inicial 
- * 11-06-2024   <Pedro Castro>      2 - Se modifica operacion matematica 
+ * 11-06-2024   <Pedro Castro>        2 - Se modifica operacion matematica 
  ***************************************************************************************************/
 #endregion Documentación
 
