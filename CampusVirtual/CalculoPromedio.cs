@@ -9,7 +9,8 @@
  *                                                                                                           
  * Fecha         Autores         	Modificación                                                                 
  * ===========   ============   	=====================
- * 11-06-2024   <Pedro Castro>        1 - Version Inicial  
+ * 11-06-2024   <Pedro Castro>        1 - Version Inicial 
+ * 11-06-2024   <Pedro Castro>      2 - Se modifica operacion matematica 
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -19,6 +20,8 @@ double TercerCorte;
 double CuartoCorte;
 string Promedioanual;
 string PromedioSemestral;
+int ValorDivisionSemestre = 2;
+int ValorDivisionanual = 4;
 
 /// <summary>
 /// Capturar y ver detalle del promedio semestral
@@ -29,7 +32,7 @@ Console.WriteLine("Ingresa el valor de tu primer corte:");
 PrimerCorte = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Ingresa el valor de tu segundo corte:");
 SegundoCorte = Convert.ToDouble(Console.ReadLine());
-PromedioSemestral = ("Tu promedio del semestre es:" + PrimerCorte + SegundoCorte / 2);
+PromedioSemestral = ("Tu promedio del semestre es:" + " " + (PrimerCorte + SegundoCorte) / (ValorDivisionSemestre));
 
 Console.WriteLine(PromedioSemestral);
 
@@ -46,6 +49,6 @@ Console.WriteLine("Ingresa el valor de tu tercer corte:");
 TercerCorte = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Ingresa el valor de tu cuarto corte:");
 CuartoCorte = Convert.ToDouble(Console.ReadLine());
-Promedioanual = ("Tu promedio anual es:" + PrimerCorte + SegundoCorte + TercerCorte + CuartoCorte / 4);
+Promedioanual = ("Tu promedio anual es:" + " " + (PrimerCorte + SegundoCorte + TercerCorte + CuartoCorte) / (ValorDivisionanual));
 
 Console.WriteLine(Promedioanual);
