@@ -1,0 +1,12 @@
+History:
+
+Se modifica archivo history para dar a conocer de mejor manera, los cambios ejecutados en el proyecto.
+
+| Función agregada | Descripción                                            |
+| ---------------- | ------------------------------------------------------ |
+| `Header`         | Contiene el diseño de la cabecera inicial del proyecto.|
+| `Body`           | Contiene el body inicial del proyecto                  |
+| `Footer`         | Contiene el body inicial del proyecto                  |
+| `Diseño CSS`     | Se agrega diseño CSS inicial                           |
+| `Readme`         | Se agrega Readme del proyecto                          |
+| `C#`             | Se agrega Primer controlador del proyecto              |
