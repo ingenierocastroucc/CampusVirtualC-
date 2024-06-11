@@ -1,0 +1,15 @@
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\bin\Debug\net6.0\CampusVirtual.exe
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\bin\Debug\net6.0\CampusVirtual.deps.json
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\bin\Debug\net6.0\CampusVirtual.runtimeconfig.json
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\bin\Debug\net6.0\CampusVirtual.dll
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\bin\Debug\net6.0\CampusVirtual.pdb
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.AssemblyInfoInputs.cache
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.AssemblyInfo.cs
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.csproj.CoreCompileInputs.cache
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.sourcelink.json
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.dll
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\refint\CampusVirtual.dll
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.pdb
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\CampusVirtual.genruntimeconfig.cache
+C:\Users\Pedro Castro\Desktop\PRUEBASTECNICAS\CURSOS\PLATZI\C#\CampusVirtual\CampusVirtual\obj\Debug\net6.0\ref\CampusVirtual.dll

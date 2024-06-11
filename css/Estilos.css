@@ -1,0 +1,119 @@
+body
+{
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor
+{
+    background: rgb(0, 128, 0);
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.5);
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+    border-bottom: 5px solid  rgb(192, 192, 192);
+    position: fixed;
+    top: 0;
+    width: 89%;
+}
+
+#contenedor #logocampus
+{
+    width: 25px;
+    vertical-align: sub;
+}
+
+#contenedor #menu
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#container
+{
+    width: 90%;
+    padding: 0;
+    text-align: left;
+    border: 1px solid #DDD;
+    margin: 0 auto;
+    height: 90%;
+}
+
+#container h1
+{
+    font-size: 45px;
+}
+#post
+{
+    background: white;
+    padding: 1em;
+}
+#post #estudiante
+{
+    width: 300px;
+    border-radius: 20px;
+}
+#post #asignaturas
+{
+    position: relative;
+    top: 10px;
+}
+#post #seccionnovedades
+{
+    display: flex;
+    justify-content: left;
+    background-color: rgb(192, 192, 192);
+    width: 50%;
+    height: 50%;
+}
+#post #seccionnovedades #novedades
+{
+    width: 50%;
+    height: 50%;
+    background: rgb(192, 192, 192);
+    border-radius: 20px;
+}
+#footer
+{
+    background:rgb(0, 128, 0);
+    color: white;
+    text-align: left;
+    padding: 0.2em;
+}
+#buscar
+{
+    text-align: center;
+    font-family: Arial;
+}
+#items
+{
+    display: flex;
+    background: rgb(192, 192, 192);
+    width: 99%;
+    height: 45px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    color: white;
+}
+#itemsnovedades
+{
+    display: flex;
+    background: rgb(192, 192, 192);
+    width: 50%;
+    height: 195px;
+    justify-content: right;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 200px;
+}
