@@ -10,18 +10,19 @@
  * Fecha         Autores         	Modificación                                                                 
  * ===========   ============   	=====================
  * 11-06-2024   <Pedro Castro>        1 - Version Inicial 
- * 11-06-2024   <Pedro Castro>        2 - Se modifica operacion matematica 
+ * 11-06-2024   <Pedro Castro>        2 - Se modifica operacion matematica
+ * 11-06-2024   <Pedro Castro>        3 - Se declaran variables
  ***************************************************************************************************/
 #endregion Documentación
 
-double PrimerCorte;
-double SegundoCorte;
-double TercerCorte;
-double CuartoCorte;
-string Promedioanual;
-string PromedioSemestral;
-int ValorDivisionSemestre = 2;
-int ValorDivisionanual = 4;
+var PrimerCorte = 0.0;
+var SegundoCorte = 0.0;
+var TercerCorte = 0.0;
+var CuartoCorte = 0.0;
+var Promedioanual = "";
+var PromedioSemestral = "";
+var ValorDivisionSemestre = 2;
+var ValorDivisionanual = 4;
 
 /// <summary>
 /// Capturar y ver detalle del promedio semestral
