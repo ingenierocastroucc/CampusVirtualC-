@@ -14,6 +14,7 @@
  * 11-06-2024   <Pedro Castro>        3 - Se declaran variables
  * 12-06-2024   <Pedro Castro>        4 - Se crean variables, constantes y metodos para el calculo de horas semanales, se aplica camelCase
  * 13-06-2024   <Pedro Castro>        5 - Se agrega contador a las horas estudiantiles.
+ * 13-06-2024   <Pedro Castro>        5 - Se agregan operadores logicos.
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -41,6 +42,22 @@ Console.WriteLine("Ingresa el valor de tu segundo corte:");
 segundoCorte = Convert.ToDouble(Console.ReadLine());
 promedioSemestral = ("Tu promedio del semestre es:" + " " + (primerCorte + segundoCorte) / (ValorDivisionSemestre));
 
+if (primerCorte < 3 || segundoCorte < 3)
+{
+    if (primerCorte != 0 && primerCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del primer corte:" + " " +primerCorte + " " +
+                         "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+    if (segundoCorte != 0 && segundoCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del segundo corte:"+ 
+                          " "+ segundoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+}
+
 Console.WriteLine(promedioSemestral);
 
 /// <summary>
@@ -57,6 +74,34 @@ tercerCorte = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Ingresa el valor de tu cuarto corte:");
 cuartoCorte = Convert.ToDouble(Console.ReadLine());
 promedioanual = ("Tu promedio anual es:" + " " + (primerCorte + segundoCorte + tercerCorte + cuartoCorte) / (ValorDivisionanual));
+
+if (primerCorte < 3 || segundoCorte < 3)
+{
+    if (primerCorte != 0 && primerCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del primer corte:" + " " + primerCorte + " " +
+                         "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+    if (segundoCorte != 0 && segundoCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del segundo corte:" +
+                          " " + segundoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+    if (tercerCorte != 0 && tercerCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del tercer corte:" +
+                          " " + segundoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+    if (cuartoCorte != 0 && cuartoCorte < 3)
+    {
+        Console.WriteLine("Tu calificacion del cuarto corte:" +
+                          " " + cuartoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
+    }
+
+}
 
 Console.WriteLine(promedioanual);
 
@@ -86,6 +131,11 @@ Console.WriteLine("Ingresa el numero de dias cursados en la semana:");
 numeroDias = Convert.ToInt32(Console.ReadLine());
 horarioSemanalCursado = ("Tu horario semanal es:" + " " + (horasDiariasAprox * numeroDias));
 horarioMensualCursado = ("Tu horario mensual es:" + " " + (horasDiariasAprox * ValorMultiplicacionDias));
+
+if (horasDiariasAprox > 10 && numeroDias > 5)
+{
+    Console.WriteLine("Tu horario cursado, supera el numero de horas recomendadas por los profesionales de la Salud");
+}
 
 Console.WriteLine(horarioSemanalCursado);
 Console.WriteLine(horarioMensualCursado);
