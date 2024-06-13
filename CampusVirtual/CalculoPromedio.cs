@@ -13,6 +13,7 @@
  * 11-06-2024   <Pedro Castro>        2 - Se modifica operacion matematica
  * 11-06-2024   <Pedro Castro>        3 - Se declaran variables
  * 12-06-2024   <Pedro Castro>        4 - Se crean variables, constantes y metodos para el calculo de horas semanales, se aplica camelCase
+ * 13-06-2024   <Pedro Castro>        5 - Se agrega contador a las horas estudiantiles.
  ***************************************************************************************************/
 #endregion Documentación
 
