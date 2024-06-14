@@ -18,6 +18,7 @@
  * 13-06-2024   <Pedro Castro>        7 - Se agrega materia de string de materias cursadas.
  * 14-06-2024   <Pedro Castro>        8 - Se agrega menu de opciones.
  * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para ver disponibilidad de horarios.
+ * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para la compra de creditos y matricula de asignaturas.
  ***************************************************************************************************/
 #endregion Documentación
 
