@@ -192,4 +192,8 @@ switch (switchControl)
         Console.WriteLine(horarioMensualAsignatura);
 
     break;
+
+    default: Console.WriteLine("El valor ingresado no corresponde a las opciones disponibles !Gracias por tilizar este tu campus virtual¡");
+
+    break;
 }
