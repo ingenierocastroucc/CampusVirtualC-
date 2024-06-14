@@ -30,6 +30,7 @@ using System;
 /// <returns>listas de variables</returns>
 
 var switchControl = "";
+var creditos = 0;
 var menu = "Si";
 
 /// <summary>
@@ -57,11 +58,13 @@ var horasDiariasAsignatura = 0;
 var numeroDias = 0;
 var numeroDiasAsignatura = 0;
 var horarioDisponibleAsignatura = 0;
+var asignaturaAdquirida = 0;
 var horarioSemanalCursado = "";
 var horarioMensualCursado = "";
 var horarioSemanalAsignatura = "";
 var horarioMensualAsignatura = "";
 var switchControlHorario = "";
+var matriculaAsignatura = "";
 const int ValorMultiplicacionDias = 30;
 
 while (menu == "Si")
@@ -71,7 +74,8 @@ while (menu == "Si")
                       "Para calcular tu promedio anual por favor presiona 2 \n" +
                       "Para calcular el horario semanal estudiantil por favor presiona 3 \n" +
                       "Para calcular el horario necesario para cursar una asignatura por favor presiona 4 \n" +
-                      "Para verificar horarios disponibles de las asignaturas por favor presiona 5");
+                      "Para verificar horarios disponibles de las asignaturas por favor presiona 5 \n" +
+                      "¿Deseas comprar creditos, para matricular tus asignaturas?, por favor presiona 6");
     switchControl = Console.ReadLine();
 
 
@@ -115,7 +119,7 @@ while (menu == "Si")
 
             Console.WriteLine(promedioSemestralInfo);
             Console.WriteLine(promedioSemestral);
-            break;
+        break;
 
         /// <summary>
         /// Capturar y ver detalle del promedio anual
@@ -168,7 +172,7 @@ while (menu == "Si")
 
             Console.WriteLine(promedioanual);
 
-            break;
+        break;
 
         /// <summary>
         /// Variables para capturar e imprimir el horario semanal estudiantil
@@ -193,7 +197,7 @@ while (menu == "Si")
 
             Console.WriteLine(horarioSemanalCursado);
             Console.WriteLine(horarioMensualCursado);
-            break;
+        break;
 
         /// <summary>
         /// Capturar y ver detalle de las horas semanalas y mensuales necesarias para cursar una materia
@@ -241,7 +245,7 @@ while (menu == "Si")
                     do
                     {
                         System.Random random = new System.Random();
-                        horarioDisponibleAsignatura = random.Next(1, 5);
+                        horarioDisponibleAsignatura = random.Next(1, 3);
                         Console.WriteLine("La intensidad horaria disponible es:" + " " + horarioDisponibleAsignatura);
                         Console.WriteLine("¿Deseas consultar otra intensidad horaria dsiponible?");
 
@@ -251,12 +255,62 @@ while (menu == "Si")
                     do
                     {
                         System.Random random = new System.Random();
-                        horarioDisponibleAsignatura = random.Next(1, 5);
+                        horarioDisponibleAsignatura = random.Next(1, 4);
                         Console.WriteLine("La intensidad horaria disponible es:" + " " + horarioDisponibleAsignatura);
                         Console.WriteLine("¿Deseas consultar otra intensidad horaria dsiponible?");
 
                     } while (Console.ReadLine() == "Si");
                 break;
+            }
+
+        break;
+
+        case "6":
+            Console.WriteLine("¿Cuantos creditos deseas comprar?");
+            creditos = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i< creditos; i++) 
+            {
+                Console.WriteLine("¿Deseas matricular una asignatura?Si/No");
+                matriculaAsignatura = Console.ReadLine();
+                if (matriculaAsignatura == "Si")
+                {
+                    Console.WriteLine("¿Que asignatura deseas adquirir?\n" +
+                                  "Para matricular calculo, presione 1 \n" +
+                                  "Para matricular electiva, presione 2 \n" +
+                                  "Para matricular ingles, presione 3 \n");
+                    asignaturaAdquirida = Convert.ToInt32(Console.ReadLine());
+                    if (asignaturaAdquirida == 1)
+                    {
+                        Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
+                        i = i + 3;
+                    }
+                    else if (asignaturaAdquirida == 2)
+                    {
+                        Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
+                        i = i + 2;
+                    }
+                    else if (asignaturaAdquirida == 3)
+                    {
+                        Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
+                        i = i + 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine("La opcion diligenciada no se encuentra disponible.");
+                    }
+                }
+                else if (matriculaAsignatura == "No")
+                {
+                    Console.WriteLine("Ten encuenta los periodos habilitados, para matriculas de asignaturas.");
+                    i = creditos;
+                }
+
+            }
+            creditos = 0;
+            if (creditos == 0 && matriculaAsignatura == "Si")
+            {
+                Console.WriteLine("No cuenta con creditos disponibles, para matricular una asignatura.");
             }
 
         break;
