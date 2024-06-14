@@ -15,6 +15,7 @@
  * 12-06-2024   <Pedro Castro>        4 - Se crean variables, constantes y metodos para el calculo de horas semanales, se aplica camelCase
  * 13-06-2024   <Pedro Castro>        5 - Se agrega contador a las horas estudiantiles.
  * 13-06-2024   <Pedro Castro>        6 - Se agregan operadores logicos.
+ * 13-06-2024   <Pedro Castro>        7 - Se agrega materia de string de materias cursadas.
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -28,6 +29,8 @@ var tercerCorte = 0.0;
 var cuartoCorte = 0.0;
 var promedioanual = "";
 var promedioSemestral = "";
+var promedioSemestralInfo = "";
+var materiaEnCurso = "";
 const int ValorDivisionSemestre = 2;
 const int ValorDivisionanual = 4;
 
@@ -35,29 +38,37 @@ const int ValorDivisionanual = 4;
 /// Capturar y ver detalle del promedio semestral
 /// </summary>
 /// <returns>listas del detalle de la solicitud del calculo del promedio semestral</returns>
+Console.WriteLine("¿Que materia estas cursando?");
+materiaEnCurso = Convert.ToString(Console.ReadLine());
 Console.WriteLine("Tu promedio actual semestral:");
 Console.WriteLine("Ingresa el valor de tu primer corte:");
 primerCorte = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Ingresa el valor de tu segundo corte:");
 segundoCorte = Convert.ToDouble(Console.ReadLine());
 promedioSemestral = ("Tu promedio del semestre es:" + " " + (primerCorte + segundoCorte) / (ValorDivisionSemestre));
+promedioSemestralInfo = $"Nota del primer corte:{primerCorte}\nNota del segundo corte:{segundoCorte} \nDe la materia en curso {materiaEnCurso}";
 
 if (primerCorte < 3 || segundoCorte < 3)
 {
     if (primerCorte != 0 && primerCorte < 3)
     {
-        Console.WriteLine("Tu calificacion del primer corte:" + " " +primerCorte + " " +
+        Console.WriteLine("Tu calificacion del primer corte:" + " " + primerCorte + " " +
                          "es inferior, a la calificiacion necesaria para aprobar el curso");
     }
 
     if (segundoCorte != 0 && segundoCorte < 3)
     {
-        Console.WriteLine("Tu calificacion del segundo corte:"+ 
-                          " "+ segundoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
+        Console.WriteLine("Tu calificacion del segundo corte:" +
+                          " " + segundoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
     }
 
 }
+else 
+{
+Console.WriteLine("Tus calificaciones cumplen para aprobar el curso");
+}
 
+Console.WriteLine(promedioSemestralInfo);
 Console.WriteLine(promedioSemestral);
 
 /// <summary>
@@ -101,6 +112,10 @@ if (primerCorte < 3 || segundoCorte < 3)
                           " " + cuartoCorte + " " + "es inferior, a la calificiacion necesaria para aprobar el curso");
     }
 
+}
+else
+{
+    Console.WriteLine("Tus calificaciones cumplen para aprobar el curso");
 }
 
 Console.WriteLine(promedioanual);
