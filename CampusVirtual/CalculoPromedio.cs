@@ -34,6 +34,8 @@ var switchControl = "";
 var creditos = 0;
 var menu = "Si";
 
+Matriculas matriculas = new Matriculas();
+
 /// <summary>
 /// Variables para capturar e imprimir el promedio estudiantil
 /// </summary>
@@ -283,18 +285,24 @@ while (menu == "Si")
                     asignaturaAdquirida = Convert.ToInt32(Console.ReadLine());
                     if (asignaturaAdquirida == 1)
                     {
+                        matriculas.Nombre = "Profesor Pedro Diaz";
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
+                        Console.WriteLine(matriculas.Nombre);
                         i = i + 3;
                     }
                     else if (asignaturaAdquirida == 2)
                     {
+                        matriculas.Nombre = "Profesor Luis Caballero";
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
+                        Console.WriteLine(matriculas.Nombre);
                         i = i + 2;
                     }
                     else if (asignaturaAdquirida == 3)
                     {
+                        matriculas.Nombre = "Profesora Diana Ceballo";
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
                         i = i + 1;
+                        Console.WriteLine(matriculas.Nombre);
                     }
                     else
                     {
