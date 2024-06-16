@@ -18,8 +18,22 @@ class Matriculas
     public int IdAsignaturamatriculada;
     public string NombreAsignatura;
     public bool Nivelacion;
-    public List<Asignaturas> IntencidadHoraria;
+    public List<Asignaturas> IntencidadHoras;
     public string Profesor;
+
+    public Matriculas() 
+    {
+        IntencidadHoras = new List<Asignaturas>();
+        Nivelacion = true;
+    }
+
+    public void UsoIntencidadHoraria() 
+    {
+        foreach (var item in IntencidadHoras) 
+        { 
+            Console.WriteLine($"{NombreAsignatura} posee los siguientes horarios disponibles {item.Horario}");
+        }
+    }
 }
 
 class Profesor

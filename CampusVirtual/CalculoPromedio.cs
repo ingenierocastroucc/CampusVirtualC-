@@ -40,6 +40,12 @@ Matriculas matricula = new Matriculas();
 Asignaturas asignaturas = new Asignaturas();
 List < Asignaturas > intencidadHoraria = new List<Asignaturas>();
 
+var matriculasHorarios = new Matriculas();
+matriculasHorarios.NombreAsignatura = "Calculo";
+
+List<Asignaturas> calculoHorario = new List<Asignaturas>();
+matriculasHorarios.UsoIntencidadHoraria(); 
+
 /// <summary>
 /// Variables para capturar e imprimir el promedio estudiantil
 /// </summary>
@@ -294,7 +300,8 @@ while (menu == "Si")
                         matricula.NombreAsignatura = "calculo";
                         matricula.Nivelacion = false;
                         asignaturas.IdAsignatura = 1;
-                        matricula.IntencidadHoraria = intencidadHoraria;
+                        matriculasHorarios.UsoIntencidadHoraria();
+                        Console.WriteLine(matriculasHorarios.NombreAsignatura);
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 3;
@@ -306,7 +313,7 @@ while (menu == "Si")
                         matricula.NombreAsignatura = "electiva";
                         matricula.Nivelacion = true;
                         asignaturas.IdAsignatura = 2;
-                        matricula.IntencidadHoraria = intencidadHoraria;
+                        matricula.IntencidadHoras = intencidadHoraria;
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 2;
@@ -318,7 +325,7 @@ while (menu == "Si")
                         matricula.NombreAsignatura = "ingles";
                         matricula.Nivelacion = true;
                         asignaturas.IdAsignatura = 3;
-                        matricula.IntencidadHoraria = intencidadHoraria;
+                        matricula.IntencidadHoras = intencidadHoraria;
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
                         i = i + 1;
                         Console.WriteLine(profesor.Nombre);
