@@ -18,7 +18,8 @@
  * 13-06-2024   <Pedro Castro>        7 - Se agrega materia de string de materias cursadas.
  * 14-06-2024   <Pedro Castro>        8 - Se agrega menu de opciones.
  * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para ver disponibilidad de horarios.
- * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para la compra de creditos y matricula de asignaturas.
+ * 14-06-2024   <Pedro Castro>        10- Se agrega menu de opciones, para la compra de creditos y matricula de asignaturas.
+ * 15-06-2024   <Pedro Castro>        11- Se incluye en el menu de opciones objetos a partir de nuevas clases.
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -34,7 +35,10 @@ var switchControl = "";
 var creditos = 0;
 var menu = "Si";
 
-Matriculas matriculas = new Matriculas();
+Profesor profesor = new Profesor();
+Matriculas matricula = new Matriculas();
+Asignaturas asignaturas = new Asignaturas();
+List < Asignaturas > intencidadHoraria = new List<Asignaturas>();
 
 /// <summary>
 /// Variables para capturar e imprimir el promedio estudiantil
@@ -285,24 +289,39 @@ while (menu == "Si")
                     asignaturaAdquirida = Convert.ToInt32(Console.ReadLine());
                     if (asignaturaAdquirida == 1)
                     {
-                        matriculas.Nombre = "Profesor Pedro Diaz";
+                        profesor.Nombre = "Profesor Pedro Diaz";
+                        matricula.IdAsignaturamatriculada = 1;
+                        matricula.NombreAsignatura = "calculo";
+                        matricula.Nivelacion = false;
+                        asignaturas.IdAsignatura = 1;
+                        matricula.IntencidadHoraria = intencidadHoraria;
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
-                        Console.WriteLine(matriculas.Nombre);
+                        Console.WriteLine(profesor.Nombre);
                         i = i + 3;
                     }
                     else if (asignaturaAdquirida == 2)
                     {
-                        matriculas.Nombre = "Profesor Luis Caballero";
+                        profesor.Nombre = "Profesor Luis Caballero";
+                        matricula.IdAsignaturamatriculada = 2;
+                        matricula.NombreAsignatura = "electiva";
+                        matricula.Nivelacion = true;
+                        asignaturas.IdAsignatura = 2;
+                        matricula.IntencidadHoraria = intencidadHoraria;
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
-                        Console.WriteLine(matriculas.Nombre);
+                        Console.WriteLine(profesor.Nombre);
                         i = i + 2;
                     }
                     else if (asignaturaAdquirida == 3)
                     {
-                        matriculas.Nombre = "Profesora Diana Ceballo";
+                        profesor.Nombre = "Profesora Diana Ceballo";
+                        matricula.IdAsignaturamatriculada = 3;
+                        matricula.NombreAsignatura = "ingles";
+                        matricula.Nivelacion = true;
+                        asignaturas.IdAsignatura = 3;
+                        matricula.IntencidadHoraria = intencidadHoraria;
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
                         i = i + 1;
-                        Console.WriteLine(matriculas.Nombre);
+                        Console.WriteLine(profesor.Nombre);
                     }
                     else
                     {
