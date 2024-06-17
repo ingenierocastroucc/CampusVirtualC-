@@ -10,6 +10,7 @@
  * Fecha         Autores         	Modificación                                                                 
  * ===========   ============   	=====================
  * 15-06-2024   <Pedro Castro>        1- Se crean las clases Matriculas, Profesor y Asiganturas.
+ * 17-06-2024   <Pedro Castro>        2- Se crea  la  clase  Record y se elimina propiedad innecesaria.
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -54,7 +55,6 @@ class Asignaturas
     public string Nombre;
     public bool Nivelacion;
     public IntencidadHoraria Horario;
-    public string Asignatura;
 }
 
 enum IntencidadHoraria
@@ -63,3 +63,5 @@ enum IntencidadHoraria
     Dos,
     Tres
 }
+
+public record AsignaturasNivelacion (int IdAsignatura, string Nombre, bool Nivelacion);

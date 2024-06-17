@@ -20,6 +20,7 @@
  * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para ver disponibilidad de horarios.
  * 14-06-2024   <Pedro Castro>        10- Se agrega menu de opciones, para la compra de creditos y matricula de asignaturas.
  * 15-06-2024   <Pedro Castro>        11- Se incluye en el menu de opciones objetos a partir de nuevas clases.
+ * 17-06-2024   <Pedro Castro>        2- Se crea  la  clase  Record.
  ***************************************************************************************************/
 #endregion Documentación
 
@@ -78,6 +79,7 @@ var horarioMensualCursado = "";
 var horarioSemanalAsignatura = "";
 var horarioMensualAsignatura = "";
 var switchControlHorario = "";
+var switchControlNivelacion = "";
 var matriculaAsignatura = "";
 const int ValorMultiplicacionDias = 30;
 
@@ -89,7 +91,8 @@ while (menu == "Si")
                       "Para calcular el horario semanal estudiantil por favor presiona 3 \n" +
                       "Para calcular el horario necesario para cursar una asignatura por favor presiona 4 \n" +
                       "Para verificar horarios disponibles de las asignaturas por favor presiona 5 \n" +
-                      "¿Deseas comprar creditos, para matricular tus asignaturas?, por favor presiona 6");
+                      "¿Deseas comprar creditos, para matricular tus asignaturas?, por favor presiona 6 \n"+
+                      "¿Deseas comprar creditos, tus asignaturas a nivelar?, por favor presiona 7");
     switchControl = Console.ReadLine();
 
 
@@ -356,6 +359,34 @@ while (menu == "Si")
             if (creditos == 0 && matriculaAsignatura == "Si")
             {
                 Console.WriteLine("No cuenta con creditos disponibles, para matricular una asignatura.");
+            }
+
+        break;
+
+        case "7":
+            Console.WriteLine("Para verificar la asignatura a nivelar, por favor presiona 1\n" +
+                             "Para verificar horario disponible, para la nivelacion de las asignaturas presiona 2");
+            switchControlNivelacion = Console.ReadLine();
+
+            switch (switchControlNivelacion)
+            {
+
+                case "1":
+                    profesor.Nombre = "Profesor Juan Diaz";;
+                    AsignaturasNivelacion asignaturasNivelacion = new(1, "calculo", true );
+                    Console.WriteLine(profesor.Nombre);
+                    Console.WriteLine($"Nombre de asignatura a nivelar:{asignaturasNivelacion.Nombre}");
+                    break;
+                case "2":
+                    do
+                    {
+                        System.Random random = new System.Random();
+                        horarioDisponibleAsignatura = random.Next(1, 8);
+                        Console.WriteLine("La intensidad horaria disponible para la nivelacion es:" + " " + horarioDisponibleAsignatura);
+                        Console.WriteLine("¿Deseas consultar otra intensidad horaria dsiponible?");
+
+                    } while (Console.ReadLine() == "Si");
+                break;
             }
 
         break;
