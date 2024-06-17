@@ -44,7 +44,8 @@ var matriculasHorarios = new Matriculas();
 matriculasHorarios.NombreAsignatura = "Calculo";
 
 List<Asignaturas> calculoHorario = new List<Asignaturas>();
-matriculasHorarios.UsoIntencidadHoraria(); 
+matriculasHorarios.UsoIntencidadHoraria();
+
 
 /// <summary>
 /// Variables para capturar e imprimir el promedio estudiantil
@@ -296,12 +297,15 @@ while (menu == "Si")
                     if (asignaturaAdquirida == 1)
                     {
                         profesor.Nombre = "Profesor Pedro Diaz";
-                        matricula.IdAsignaturamatriculada = 1;
-                        matricula.NombreAsignatura = "calculo";
-                        matricula.Nivelacion = false;
-                        asignaturas.IdAsignatura = 1;
                         matriculasHorarios.UsoIntencidadHoraria();
-                        Console.WriteLine(matriculasHorarios.NombreAsignatura);
+                        Asignaturas asignatura = new Asignaturas
+                        {
+                            IdAsignatura = 1,
+                            Nombre = "Calculo",
+                            Horario = IntencidadHoraria.Cuatro,
+                            Nivelacion = true
+                        };
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 3;
@@ -309,11 +313,14 @@ while (menu == "Si")
                     else if (asignaturaAdquirida == 2)
                     {
                         profesor.Nombre = "Profesor Luis Caballero";
-                        matricula.IdAsignaturamatriculada = 2;
-                        matricula.NombreAsignatura = "electiva";
-                        matricula.Nivelacion = true;
-                        asignaturas.IdAsignatura = 2;
-                        matricula.IntencidadHoras = intencidadHoraria;
+                        Asignaturas asignatura = new Asignaturas
+                        {
+                            IdAsignatura = 2,
+                            Nombre = "Electiva",
+                            Horario = IntencidadHoraria.Dos,
+                            Nivelacion = true
+                        };
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 2;
@@ -321,11 +328,14 @@ while (menu == "Si")
                     else if (asignaturaAdquirida == 3)
                     {
                         profesor.Nombre = "Profesora Diana Ceballo";
-                        matricula.IdAsignaturamatriculada = 3;
-                        matricula.NombreAsignatura = "ingles";
-                        matricula.Nivelacion = true;
-                        asignaturas.IdAsignatura = 3;
-                        matricula.IntencidadHoras = intencidadHoraria;
+                        Asignaturas asignatura = new Asignaturas
+                        {
+                            IdAsignatura = 3,
+                            Nombre = "Ingles",
+                            Horario = IntencidadHoraria.Tres,
+                            Nivelacion = true
+                        };
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
                         i = i + 1;
                         Console.WriteLine(profesor.Nombre);

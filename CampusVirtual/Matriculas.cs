@@ -13,26 +13,29 @@
  ***************************************************************************************************/
 #endregion Documentación
 
+using System.Text;
+
 class Matriculas
 {
     public int IdAsignaturamatriculada;
     public string NombreAsignatura;
-    public bool Nivelacion;
     public List<Asignaturas> IntencidadHoras;
     public string Profesor;
 
     public Matriculas() 
     {
         IntencidadHoras = new List<Asignaturas>();
-        Nivelacion = true;
     }
 
-    public void UsoIntencidadHoraria() 
+    public string UsoIntencidadHoraria() 
     {
+        StringBuilder sbIntencidadHoraria = new StringBuilder();
         foreach (var item in IntencidadHoras) 
-        { 
-            Console.WriteLine($"{NombreAsignatura} posee los siguientes horarios disponibles {item.Horario}");
+        {
+            sbIntencidadHoraria.AppendLine($"{NombreAsignatura} posee los siguientes horarios disponibles {item.Horario}");
         }
+
+        return sbIntencidadHoraria.ToString();
     }
 }
 
