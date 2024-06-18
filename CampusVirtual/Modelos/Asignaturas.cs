@@ -21,8 +21,9 @@ namespace CampusVirtual.Models
 {
     public class Asignaturas
     {
+        private string NombreFinal;
         public int IdAsignatura;
-        public string Nombre;
+        public string Nombre { get { return NombreFinal; } set  { NombreFinal = value.Trim(); } }
         public bool Nivelacion;
         public IntencidadHoraria Horario;
     }
