@@ -20,11 +20,12 @@
  * 14-06-2024   <Pedro Castro>        9 - Se agrega menu de opciones, para ver disponibilidad de horarios.
  * 14-06-2024   <Pedro Castro>        10- Se agrega menu de opciones, para la compra de creditos y matricula de asignaturas.
  * 15-06-2024   <Pedro Castro>        11- Se incluye en el menu de opciones objetos a partir de nuevas clases.
- * 17-06-2024   <Pedro Castro>        2- Se crea  la  clase  Record.
+ * 17-06-2024   <Pedro Castro>        12- Se crea  la  clase  Record.
  ***************************************************************************************************/
 #endregion Documentación
 
 
+using CampusVirtual.Models;
 using System;
 
 /// <summary>

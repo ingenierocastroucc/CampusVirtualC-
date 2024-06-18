@@ -14,6 +14,7 @@
  ***************************************************************************************************/
 #endregion Documentación
 
+using CampusVirtual.Models;
 using System.Text;
 
 class Matriculas
@@ -38,30 +39,6 @@ class Matriculas
 
         return sbIntencidadHoraria.ToString();
     }
-}
-
-class Profesor
-{
-    public int IdProfesor;
-    public string Nombre;
-    public bool Nivelacion;
-    public int IntencidadHoraria;
-    public string Asignatura;
-}
-
-class Asignaturas
-{
-    public int IdAsignatura;
-    public string Nombre;
-    public bool Nivelacion;
-    public IntencidadHoraria Horario;
-}
-
-enum IntencidadHoraria
-{ 
-    Cuatro,
-    Dos,
-    Tres
 }
 
 public record AsignaturasNivelacion (int IdAsignatura, string Nombre, bool Nivelacion);
