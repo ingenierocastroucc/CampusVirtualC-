@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace CampusVirtual.Models
 {
-    public class Profesor
+    public class Profesor : Matriculas
     {
         public int IdProfesor;
         public string Nombre;

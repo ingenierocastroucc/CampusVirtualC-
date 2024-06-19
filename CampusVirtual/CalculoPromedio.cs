@@ -300,7 +300,6 @@ while (menu == "Si")
                     asignaturaAdquirida = Convert.ToInt32(Console.ReadLine());
                     if (asignaturaAdquirida == 1)
                     {
-                        profesor.Nombre = "Profesor Pedro Diaz";
                         matriculasHorarios.UsoIntencidadHoraria();
                         Asignaturas asignatura = new Asignaturas
                         {

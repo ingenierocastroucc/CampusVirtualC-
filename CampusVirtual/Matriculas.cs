@@ -17,7 +17,7 @@
 using CampusVirtual.Models;
 using System.Text;
 
-class Matriculas
+public class Matriculas : Asignaturas
 {
     public int IdAsignaturamatriculada;
     public string NombreAsignatura;
