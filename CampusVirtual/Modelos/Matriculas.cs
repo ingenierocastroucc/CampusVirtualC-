@@ -14,17 +14,21 @@
  ***************************************************************************************************/
 #endregion Documentación
 
+using CampusVirtual.Interfaces;
 using CampusVirtual.Models;
 using System.Text;
 
 namespace CampusVirtual.Models
 {
-    public class Matriculas : Asignaturas
+    public class Matriculas : Asignaturas, IMatriculas
     {
-        public int IdAsignaturamatriculada;
-        public string NombreAsignatura;
-        public List<Asignaturas> IntencidadHoras;
-        public string Profesor;
+        public int Id { get; set; }
+        public int IdAsignaturamatriculada { get; set; }
+        public string NombreAsignatura { get; set; }
+        public List<Asignaturas> IntencidadHoras { get; set; }
+        public string Profesor { get; set; }
+        public string TipoInscripcion { get; set; }
+        public string Semestreinscripcion { get; set; }
 
         public Matriculas()
         {

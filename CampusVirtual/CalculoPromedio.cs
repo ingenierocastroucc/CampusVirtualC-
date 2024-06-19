@@ -25,8 +25,10 @@
 #endregion Documentación
 
 
+using CampusVirtual.Interfaces;
 using CampusVirtual.Models;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 /// <summary>
 /// Variables globales
@@ -48,6 +50,7 @@ matriculasHorarios.NombreAsignatura = "Calculo";
 List<Asignaturas> calculoHorario = new List<Asignaturas>();
 matriculasHorarios.UsoIntencidadHoraria();
 
+var matriculasInterfaces = new IImpresion();
 
 /// <summary>
 /// Variables para capturar e imprimir el promedio estudiantil
@@ -83,6 +86,7 @@ var switchControlHorario = "";
 var switchControlNivelacion = "";
 var matriculaAsignatura = "";
 const int ValorMultiplicacionDias = 30;
+
 
 while (menu == "Si")
 {
@@ -308,7 +312,13 @@ while (menu == "Si")
                             Horario = IntencidadHoraria.Cuatro,
                             Nivelacion = true
                         };
-                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
+                        Matriculas matriculas = new Matriculas
+                        {
+                            TipoInscripcion = "Convensional",
+                            Semestreinscripcion = "Primer Semestre"
+                        };
+                        matriculasInterfaces.Impresionmatriculas(matriculas);
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\nHorario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura de calculo.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 3;
@@ -323,7 +333,13 @@ while (menu == "Si")
                             Horario = IntencidadHoraria.Dos,
                             Nivelacion = true
                         };
-                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
+                        Matriculas matriculas = new Matriculas
+                        {
+                            TipoInscripcion = "Convensional",
+                            Semestreinscripcion = "Primer Semestre"
+                        };
+                        matriculasInterfaces.Impresionmatriculas(matriculas);
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\nHorario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura electiva.");
                         Console.WriteLine(profesor.Nombre);
                         i = i + 2;
@@ -338,7 +354,13 @@ while (menu == "Si")
                             Horario = IntencidadHoraria.Tres,
                             Nivelacion = true
                         };
-                        Console.WriteLine($"Nombre:{asignatura.Nombre}\n Horario: {asignatura.Horario}");
+                        Matriculas matriculas = new Matriculas
+                        {
+                            TipoInscripcion = "Intensiva",
+                            Semestreinscripcion = "Primer Semestre"
+                        };
+                        matriculasInterfaces.Impresionmatriculas(matriculas);
+                        Console.WriteLine($"Nombre:{asignatura.Nombre}\nHorario: {asignatura.Horario}");
                         Console.WriteLine("!Felicidades¡ ya te encunetras matriculado en la asignatura ingles.");
                         i = i + 1;
                         Console.WriteLine(profesor.Nombre);
