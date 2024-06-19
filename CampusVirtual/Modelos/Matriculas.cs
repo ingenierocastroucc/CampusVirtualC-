@@ -17,27 +17,30 @@
 using CampusVirtual.Models;
 using System.Text;
 
-public class Matriculas : Asignaturas
+namespace CampusVirtual.Models
 {
-    public int IdAsignaturamatriculada;
-    public string NombreAsignatura;
-    public List<Asignaturas> IntencidadHoras;
-    public string Profesor;
-
-    public Matriculas() 
+    public class Matriculas : Asignaturas
     {
-        IntencidadHoras = new List<Asignaturas>();
-    }
+        public int IdAsignaturamatriculada;
+        public string NombreAsignatura;
+        public List<Asignaturas> IntencidadHoras;
+        public string Profesor;
 
-    public string UsoIntencidadHoraria() 
-    {
-        StringBuilder sbIntencidadHoraria = new StringBuilder();
-        foreach (var item in IntencidadHoras) 
+        public Matriculas()
         {
-            sbIntencidadHoraria.AppendLine($"{NombreAsignatura} posee los siguientes horarios disponibles {item.Horario}");
+            IntencidadHoras = new List<Asignaturas>();
         }
 
-        return sbIntencidadHoraria.ToString();
+        public string UsoIntencidadHoraria()
+        {
+            StringBuilder sbIntencidadHoraria = new StringBuilder();
+            foreach (var item in IntencidadHoras)
+            {
+                sbIntencidadHoraria.AppendLine($"{NombreAsignatura} posee los siguientes horarios disponibles {item.Horario}");
+            }
+
+            return sbIntencidadHoraria.ToString();
+        }
     }
 }
 
